@@ -1,0 +1,39 @@
+.no-indents() {
+  margin: 0;
+  padding: 0;
+}
+
+.text(@font-size,@line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.button() {
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid @color-text--lightgrey;
+  color: @color-text--lightgrey;
+  background-color: @color-bg;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: @color-text--white;
+    background-color: @color-text--lightgrey;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+
+.container() {
+  width: 360px;
+  margin: 0 auto;
+}
+  //@media (min-width: @tablet-width) {
+  //
+  //}
