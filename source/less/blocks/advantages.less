@@ -1,0 +1,134 @@
+.advantages {
+  .container();
+
+  /*background-image: url(../img/small-photo.png);
+  background-size: 360px 89px;
+  background-repeat: no-repeat;
+  background-position: ;*/
+}
+
+.advantages__wrapper {
+  width: 250px;
+  margin: 0 auto;
+
+}
+
+.advantages__title {
+  position: relative;
+  color: #010101;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27.04px;
+  letter-spacing: 0.65px;
+  text-align:right;
+
+}
+
+.advantages__title:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #ffb600;
+}
+
+.advantages__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.advantages__item-numeration {
+  position: relative;
+  content: "";
+  width: 72px;
+  height: 72px;
+  background-color: #fee4a4;
+  border-radius: 50%;
+
+  &--credit:after {
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    content: "";
+    background-image: url(../img/credit-card.svg);
+    width: 31px;
+    height: 31px;
+  }
+
+  &--house:after {
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    content: "";
+    background-image: url(../img/house.svg);
+    width: 31px;
+    height: 31px;
+  }
+
+  &--sketch:after {
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    content: "";
+    background-image: url(../img/sketch.svg);
+    width: 31px;
+    height: 31px;
+  }
+
+  &--key:after {
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    content: "";
+    background-image: url(../img/keys.svg);
+    width: 30px;
+    height: 30px;
+  }
+
+  &--deposit:after {
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    content: "";
+    background-image: url(../img/deposit.svg);
+    width: 30px;
+    height: 30px;
+  }
+
+  &--information:after {
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    content: "";
+    background-image: url(../img/info.svg);
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.advantages__item-numeration b {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  color: #aba69b;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 12.19px;
+}
+
+.advantages__item {
+  width: 93px;
+}
+
+.advantages__item-description {
+  width: 93px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12.19px;
+  margin-bottom: 28px;
+}

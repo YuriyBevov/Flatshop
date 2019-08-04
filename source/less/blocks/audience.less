@@ -1,0 +1,61 @@
+.audience {
+  .container();
+}
+
+.audience__title {
+  position: relative;
+  color: #010101;
+  // font-family: "Lato - Black";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27.04px;
+  letter-spacing: 0.65px;
+  text-align: right;
+  .no-indents();
+  padding: 0 82px;
+}
+
+.audience__title:before {
+  position: absolute;
+  top: 0;
+  left: 82px;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #ffb600;
+}
+
+.audience__list {
+  list-style: none;
+  .no-indents();
+}
+
+.audience__item {
+  width: 210px;
+}
+
+.audience__item-container {
+  width: 211px;
+  background-color: #aba69b;
+}
+
+.audience__item b {
+color: #0a0a0a;
+font-size: 10px;
+font-weight: 700;
+line-height: 12px;
+letter-spacing: 0.95px;
+}
+
+.audience__item-description {
+  color: #fffefe;
+  font-family: "Lato";
+  font-size: 10px;
+  font-weight: 700;
+  /* Text style for "Бесплатное" */
+  line-height: 11px;
+  /* Text style for "Своевремен" */
+  line-height: 18px;
+  /* Text style for "Петербурга" */
+  line-height: 8.43px;
+}
