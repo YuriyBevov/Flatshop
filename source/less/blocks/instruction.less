@@ -1,0 +1,118 @@
+.instruction {
+  .container();
+}
+
+.instruction__wrapper {
+  padding: 0 52px;
+}
+
+.instruction__title {
+  position: relative;
+  color: #010101;
+  // font-family: "Lato - Black";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27.04px;
+  letter-spacing: 0.65px;
+  margin: 0;
+  margin-bottom: 38px;
+  text-align: right;
+}
+
+.instruction__title:before {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #ffb600;
+}
+
+.instruction__list {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  .no-indents();
+  margin: 0 auto;
+}
+
+.instruction__item {
+  position: relative;
+  width: 117px;
+  min-height: 201px;
+  background-color: #69655c;
+  margin-bottom: 10px;
+
+  &--registration:before {
+    position: absolute;
+    top: 58px;
+    left: 37px;
+    content: "";
+    width: 43px;
+    height: 43px;
+    background-image: url(../img/desktop.svg);
+  }
+
+  &--manager:before {
+    position: absolute;
+    top: 58px;
+    left: 37px;
+    content: "";
+    width: 43px;
+    height: 42px;
+    background-image: url(../img/manager2.svg);
+  }
+
+  &--contract:before {
+    position: absolute;
+    top: 58px;
+    left: 37px;
+    content: "";
+    width: 43px;
+    height: 43px;
+    background-image: url(../img/contract2.svg);
+  }
+
+  &--sketch:before {
+    position: absolute;
+    top: 58px;
+    left: 37px;
+    content: "";
+    width: 41px;
+    height: 43px;
+    background-image: url(../img/sketch2.svg);
+  }
+}
+
+.instruction__item-number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  color: #0a0a0a;
+  font-family: Lato;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12.5px;
+  padding-top: 7px;
+
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-color: #ffb600;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.instruction__item-description {
+  width: 90px;
+  color: #fffefe;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 13.34px;
+  margin: 0;
+  padding: 125px 10px 10px 15px;
+}

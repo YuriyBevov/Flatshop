@@ -1,5 +1,9 @@
 .audience {
   .container();
+  background-image: url(../img/small-photo.png);
+  background-repeat: no-repeat;
+  padding-top: 125px;
+  // margin-top: -40px;
 }
 
 .audience__title {
@@ -13,6 +17,7 @@
   text-align: right;
   .no-indents();
   padding: 0 82px;
+  margin-bottom: 65px;
 }
 
 .audience__title:before {
@@ -31,31 +36,116 @@
 }
 
 .audience__item {
-  width: 210px;
+  padding: 0 10px 0 140px;
 }
 
 .audience__item-container {
+  position: relative;
   width: 211px;
   background-color: #aba69b;
+  padding: 15px 10px 32px 36px;
+  margin-bottom: 33px;
+
+  &--agent:before {
+    position: absolute;
+    top: -60px;
+    left: -120px;
+    content: "";
+    background-image: url(../img/agent.png);
+    width:138px;
+    height: 207px;
+  }
+
+  &--agent:after {
+    position: absolute;
+    top: 145px;
+    left: -65px;
+    content: "";
+    width: 65px;
+    height: 8px;
+    background-color: #ffb600;
+  }
+
+  &--investor:before {
+    position: absolute;
+    top: -30px;
+    left: -140px;
+    content: "";
+    background-image: url(../img/investor.png);
+    width:157px;
+    height: 154px;
+  }
+
+  &--investor:after {
+
+  }
+
+  &--company:before {
+    position: absolute;
+    top: -30px;
+    left: -120px;
+    content: "";
+    background-image: url(../img/company.png);
+    width: 146px;
+    height: 169px;
+  }
+
+  &--company:after {
+    position: absolute;
+    top: 135px;
+    left: -94px;
+    content: "";
+    width: 94px;
+    height: 9px;
+    background-color: #ffb600;
+  }
 }
 
-.audience__item b {
-color: #0a0a0a;
-font-size: 10px;
-font-weight: 700;
-line-height: 12px;
-letter-spacing: 0.95px;
+
+.audience__item-title {
+  display: block;
+  position: relative;
+  color: #0a0a0a;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 11px;
+  letter-spacing: 0.95px;
+  padding-left: 36px;
+  margin-bottom: 10px;
+
+  &--agent:before {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    content: "";
+    width: 8px;
+    height: 30px;
+    background-color: #ffb600;
+  }
+
+  &--investor:before {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    content: "";
+    width: 8px;
+    height: 30px;
+    background-color: #ffb600;
+  }
 }
 
 .audience__item-description {
   color: #fffefe;
-  font-family: "Lato";
+  // font-family: "Lato";
   font-size: 10px;
   font-weight: 700;
-  /* Text style for "Бесплатное" */
   line-height: 11px;
-  /* Text style for "Своевремен" */
-  line-height: 18px;
-  /* Text style for "Петербурга" */
-  line-height: 8.43px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.audience__button {
+  position: absolute;
+  bottom: -14px;
+  .button();
 }

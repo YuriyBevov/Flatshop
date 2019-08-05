@@ -9,23 +9,29 @@
 }
 
 .button() {
-  font-weight: bold;
+  width: 141px;
+  height: 28px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid @color-text--lightgrey;
-  color: @color-text--lightgrey;
-  background-color: @color-bg;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 8.43px;
+  padding-top: 5px;
+  border: none;
+  border-radius: 14px;
+  color: #fefdfd;
+  background-color: @black-button;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    color: @color-text--white;
-    background-color: @color-text--lightgrey;
+    /*color: @color-text--white;
+    background-color: @color-text--lightgrey;*/
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    /*color: rgba(255, 255, 255, 0.3);*/
   }
 }
 
@@ -33,7 +39,5 @@
 .container() {
   width: 360px;
   margin: 0 auto;
+  // outline: 1px solid red;
 }
-  //@media (min-width: @tablet-width) {
-  //
-  //}

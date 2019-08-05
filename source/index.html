@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FlatShop</title>
-  <link rel="preload" href="../fonts/Lato-Regular.ttf" as="font">
-  <link rel="preload" href="../fonts/Lato-Bold.ttf" as="font">
-  <link rel="preload" href="../fonts/Lato-Semibold.ttf" as="font">
-  <link rel="preload" href="../fonts/Lato-Heavy.ttf" as="font">
-  <link rel="preload" href="../fonts/Lato-Black.ttf" as="font">
+  <link rel="preload" href="fonts/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Lato-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Lato-Semibold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Lato-Heavy.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Lato-Black.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link href="css/style.css" rel="stylesheet">
   <!--<script>
     document.createElement( "picture" );
@@ -36,7 +36,7 @@
           ДЛЯ ЧАСТНЫХ АГЕНТОВ
         </b>
         <p class="content__description">
-          Поиск и бронирование квартир в новостройках в один клик
+          Поиск и бронирование квартир&nbsp;в&nbsp;новостройках в один клик
         </p>
       </div>
     </section>
@@ -48,7 +48,7 @@
           <div class="presentation__slogan--wrapper">
         </h2>
         <video class="presentation__video">
-          <source src="URL">
+          <source src="#">
         </video>
       </div>
     </section>
@@ -115,52 +115,120 @@
       </h2>
       <ul class="audience__list">
         <li class="audience__item">
-          <b>
-            АГЕНТАМ ПО НЕДВИЖИМОСТИ САНКТ-ПЕТЕРБУРГА
+          <b class="audience__item-title audience__item-title--agent">
+            АГЕНТАМ&nbsp;ПО&nbsp;НЕДВИЖИМОСТИ САНКТ&nbsp;-&nbsp;ПЕТЕРБУРГА
           </b>
-          <div class="audience__item-container">
+          <div class="audience__item-container audience__item-container--agent">
             <p class="audience__item-description">
               Бесплатное подключение к системе - ваша комиссия 100%
+            </p>
+            <p class="audience__item-description">
               Своевременная выплата комиссионного вознаграждения - 5 дней (авансирование)
+            <p class="audience__item-description">
               Максимально полная и достоверная информация по рынку новостроек Санкт-Петербурга
+            </p>
+            </p>
+            <p class="audience__item-description">
               Работаем с частными агентами и посредниками
             </p>
-            <button type="button" class="audience__button button">
-
+            <button type="button" class="audience__button button ">
+              НАЧАТЬ ПОЛЬЗОВАТЬСЯ
             </button>
           </div>
         </li>
         <li class="audience__item">
-          <b>
-            ЧАСТНЫМ ИНВЕСТОРАМ И ПОДРЯДЧИКАМ
+          <b class="audience__item-title audience__item-title--investor">
+            ЧАСТНЫМ&nbsp;ИНВЕСТОРАМ&nbsp;И ПОДРЯДЧИКАМ
           </b>
-          <div class="audience__item-container">
+          <div class="audience__item-container audience__item-container--investor">
             <p class="audience__item-description">
               Используя наш сервис, вы задействуете более 2000 профессиональных агентов по недвижимости для продаж ваших квартир
+            </p>
+            <p class="audience__item-description">
               Ваши квартиры будут размещены более чем на 50 тематических сайтах по продаже недвижимости
+            </p>
+            <p class="audience__item-description">
               Мы поможем вам быстро вернуть свои инвестиции
             </p>
             <button type="button" class="audience__button button">
-
+              НАЧАТЬ ПОЛЬЗОВАТЬСЯ
             </button>
           </div>
         </li>
         <li class="audience__item">
-          <b>
+          <b class="audience__item-title audience__item-title--company">
             СТРОИТЕЛЬНЫМ  КОМПАНИЯМ
           </b>
-          <div class="audience__item-container">
+          <div class="audience__item-container audience__item-container--company">
             <p class="audience__item-description">
               Продвигайте свои объекты бесплатно при помощи нашей системы
+            </p>
+            <p class="audience__item-description">
               Увеличьте свой отдел продаж до 2000 человек
-              Вы можете привлечь клиентов, продающих свою недвижимость. Работаем с частными агентами и посредниками
+            </p>
+            <p class="audience__item-description">
+              Вы можете привлечь клиентов, продающих&nbsp;свою&nbsp;недвижимость. Работаем с частными агентами и посредниками
             </p>
             <button type="button" class="audience__button button">
-
+              НАЧАТЬ ПОЛЬЗОВАТЬСЯ
             </button>
           </div>
         </li>
       </ul>
     </section>
+    <section class="instruction">
+      <div class="instruction__wrapper">
+        <h2 class="instruction__title">
+          Как начать пользоваться системой?
+        </h2>
+        <ul class="instruction__list">
+          <li class="instruction__item instruction__item--registration">
+            <span class="instruction__item-number">01</span>
+            <p class="instruction__item-description">
+              Зарегистрируйтесь на сайте бесплатно
+            </p>
+          </li>
+          <li class="instruction__item instruction__item--manager">
+            <span class="instruction__item-number">02</span>
+            <p class="instruction__item-description">
+              С Вами свяжется  наш менеджер
+            </p>
+          </li>
+          <li class="instruction__item instruction__item--contract">
+            <span class="instruction__item-number">03</span>
+            <p class="instruction__item-description">
+              Заключите субагентский договор
+            </p>
+          </li>
+          <li class="instruction__item instruction__item--sketch">
+            <span class="instruction__item-number">04</span>
+            <p class="instruction__item-description">
+              Зарабатывайте на продаже квартир в строящихся домах
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="registration">
+      <h2 class="registration__title">
+        Пользуйтесь современными инструментами
+        для риэлторов и получайте максимальное
+        комиссионное вознаграждение
+        без посредников
+      </h2>
+    </section>
+    <footer class="main-footer">
+      <p class="main-footer__copyright">
+        FlatShop, 2019
+      </p>
+      <div class="main-footer__container">
+        <p class="main-footer__information">
+          Телефон отдела по&nbsp;работе с партнерами:
+        </p>
+        <tel class="main-footer__phone-number">
+          (812) 980-47-33
+        </tel>
+      </div>
+    </footer>
   </body>
 </html>
