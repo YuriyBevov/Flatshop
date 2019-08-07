@@ -1,19 +1,21 @@
 .presentation {
   .container();
-  background-color: #1c1b19;
   margin-top: -52px;
+  margin-bottom: 30px;
+  background-color: @presentation-black;
 }
 
 .presentation__wrapper {
   position: relative;
   width: 300px;
-  min-height: 170px; // temp
+  min-height: 246px; // временно, пока нет файла с видео
   margin: 0 auto;
   padding: 47px 0 30px;
 }
 
 .presentation__slogan--wrapper {
-  width: 105px;
+  width: 110px;
+  word-wrap: break-word;
   margin: 0 auto;
   text-align: right;
 }
@@ -30,17 +32,17 @@
   margin-top: -96px;
   margin-left: -9px;
   padding-top: 18px;
-  color: #000000;
-  background-color: #ffb600;
+  color: @black;
+  background-color: @yellow;
   z-index: 100;
 }
 
 .presentation__slogan--time {
-color: #000000;
 font-size: 12px;
 font-weight: 600;
 line-height: 15.05px;
 padding-left: 3px;
+color: @black;
 }
 
 .presentation__video {

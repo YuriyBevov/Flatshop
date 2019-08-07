@@ -1,14 +1,61 @@
 
+.main-nav {
+  position: relative;
+}
+
 .main-nav__list {
   .no-indents();
   list-style: none;
   padding: 18px 20px 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .main-nav__link--logo {
   text-decoration: none;
 }
 
-.main-nav__img {
+.main-nav__user-list {
+  position: absolute;
+  right: 0;
+  list-style: none;
+  width: 173px;
+  opacity: 0.7;
+  margin: 0;
+  padding: 30px 0 0 60px;
+  background-color: @black;
+}
 
+.main-nav__user-item {
+  margin-bottom: 27px;
+}
+
+.main-nav__user-link {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: @yellow;
+
+  &--registration:before {
+    position: absolute;
+    top: 0;
+    left: -25px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/user_registration.svg");
+  }
+
+  &--enter:before {
+    position: absolute;
+    top: 1px;
+    left: -26px;
+    content: "";
+    width: 16px;
+    height: 14px;
+    background-image: url("../img/enter_btn.svg");
+  }
 }

@@ -9,7 +9,7 @@
 
 .instruction__title {
   position: relative;
-  color: #010101;
+  color: @title-color;
   width: 300px;
   font-size: 14px;
   font-weight: 900;
@@ -28,7 +28,7 @@
   content: "";
   width: 2px;
   height: 100%;
-  background-color: #ffb600;
+  background-color: @yellow;
 }
 
 .instruction__list {
@@ -44,7 +44,7 @@
   position: relative;
   width: 117px;
   min-height: 201px;
-  background-color: #69655c;
+  background-color: @grey;
   margin-bottom: 10px;
   margin-left: 8px;
 
@@ -55,7 +55,7 @@
     content: "";
     width: 43px;
     height: 43px;
-    background-image: url(../img/desktop.svg);
+    background-image: url("../img/desktop.svg");
   }
 
   &--manager:before {
@@ -65,7 +65,7 @@
     content: "";
     width: 43px;
     height: 42px;
-    background-image: url(../img/manager2.svg);
+    background-image: url("../img/manager2.svg");
   }
 
   &--contract:before {
@@ -75,7 +75,7 @@
     content: "";
     width: 43px;
     height: 43px;
-    background-image: url(../img/contract2.svg);
+    background-image: url("../img/contract2.svg");
   }
 
   &--sketch:before {
@@ -85,7 +85,7 @@
     content: "";
     width: 41px;
     height: 43px;
-    background-image: url(../img/sketch2.svg);
+    background-image: url("../img/sketch2.svg");
   }
 }
 
@@ -98,25 +98,22 @@
   position: absolute;
   top: 8px;
   left: 8px;
-
-  color: #0a0a0a;
-  font-family: Lato;
   font-size: 10px;
   font-weight: 500;
   line-height: 12.5px;
   padding-top: 7px;
-
   content: "";
   width: 26px;
   height: 26px;
-  background-color: #ffb600;
   border-radius: 50%;
   text-align: center;
+  color: @head-black;
+  background-color: @yellow;
 }
 
 .instruction__item-description {
-  width: 90px;
-  color: #fffefe;
+  width: 115px;
+  color: @color-text-regular;
   font-size: 10px;
   font-weight: 500;
   line-height: 13.34px;
