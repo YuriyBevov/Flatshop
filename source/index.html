@@ -10,30 +10,52 @@
   <link rel="preload" href="fonts/Lato-Heavy.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="fonts/Lato-Black.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
   <body>
-    <header class="main-header container">
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--logo" href="#">
-              <img class="main-nav__img" src="img/logo.png" width="71" height="19" alt="логотип">
+    <header class="main-header">
+      <nav class="main-nav main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+
+        <picture class="main-nav__logo">
+          <!--<source media="(min-width: 1140px)" srcset="img/desktop-logo.svg">-->
+          <!--<source media="(min-width: 768px)" srcset="img/tablet-logo.svg">-->
+          <img src="img/mobile-logo.svg" width="71" height="19" alt="Логотип">
+        </picture>
+
+        <ul class="main-nav__list main-nav__list--opened">
+          <li class="main-nav__item main-nav__item--main">
+            <a href="#" class="main-nav__link main-nav__link--menu">
+              Главная
             </a>
           </li>
-          <li class="main-nav__item main-nav__item--humburger">
-            <a href="#" alt="открыть меню">
-              <img src="img/humburger.svg">
+          <li class="main-nav__item main-nav__item--advantages">
+            <a href="#" class="main-nav__link main-nav__link--menu">
+              Преимущества
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--description">
+            <a href="#" class="main-nav__link main-nav__link--menu">
+              Кому полезен сервис?
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--instruction">
+            <a href="#" class="main-nav__link main-nav__link--menu">
+              Как начать?
             </a>
           </li>
         </ul>
-        <ul class="main-nav__user-list visually-hidden">
-          <li class="main-nav__user-item">
+        <ul class="main-nav__user-list main-nav__user-list--closed">
+          <li class="main-nav__user-item main-nav__user-item--registration">
             <a href="#" class="main-nav__user-link main-nav__user-link--registration">
               Регистрация
             </a>
           </li>
-          <li class="main-nav__user-item">
-            <a href="#" class="main-nav__user-link main-nav__user-link--enter">
+          <li class="main-nav__user-item main-nav__user-item--entrance">
+            <a href="#" class="main-nav__user-link main-nav__user-link--entrance">
               Войти
             </a>
           </li>
@@ -41,28 +63,37 @@
       </nav>
     </header>
     <section class="content">
-      <div class="content__wrapper">
-        <h1 class="content__title">
-          ON-LINE БАЗА СТРОЯЩЕЙСЯ НЕДВИЖИМОСТИ
-        </h1>
-        <b class="content__type">
-          ДЛЯ ЧАСТНЫХ АГЕНТОВ
-        </b>
-        <p class="content__description">
-          Поиск и бронирование квартир&nbsp;в&nbsp;новостройках в один клик
-        </p>
+      <div class="content__container">
+        <div class="content__wrapper">
+          <h1 class="content__title">
+            ON-LINE БАЗА СТРОЯЩЕЙСЯ НЕДВИЖИМОСТИ
+          </h1>
+          <b class="content__type">
+            ДЛЯ ЧАСТНЫХ АГЕНТОВ
+          </b>
+          <p class="content__description">
+            Поиск и бронирование квартир&nbsp;в&nbsp;новостройках в один клик
+          </p>
+        </div>
       </div>
     </section>
     <section class="presentation">
-      <div class="presentation__wrapper">
-        <h2 class="presentation__slogan">
-          <div class="presentation__slogan--wrapper">
-            УЗНАЙ, КАК&nbsp;РАБОТАЕТ СИСТЕМА&nbsp;ВСЕГО <span class="presentation__slogan--time"> за 2 минуты!</span>
-          <div class="presentation__slogan--wrapper">
-        </h2>
-        <video class="presentation__video">
-          <source src="#">
-        </video>
+      <div class="presentation__container">
+        <div class="presentation__wrapper">
+          <h2 class="presentation__title">
+              УЗНАЙ, КАК&nbsp;РАБОТАЕТ СИСТЕМА&nbsp;ВСЕГО <small class="presentation__small"> за 2 минуты!</small>
+          </h2>
+          <div class="presentation__video" tabindex="0">
+            <picture>
+              <source media="(min-width: 1140px)" srcset="img/video_desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/">
+              <img src="img/video_mobile.jpg" width="302" height="170" alt="Логотип">
+            </picture>
+            <p class="presentation__video-description">
+              Как заработать на&nbsp;новостройках частному агенту?
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <section class="advantages">

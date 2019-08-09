@@ -30,7 +30,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
   background-color: @white;
   z-index: 1000;
 }
@@ -79,7 +79,7 @@
     top: 27px;
     right: 10px;
     content: "";
-    background-image: url("../img/keys.svg");
+    background-image: url("../img/key.svg");
     width: 30px;
     height: 30px;
   }
@@ -131,4 +131,109 @@
   line-height: 12.19px;
   margin: 0;
   margin-bottom: 28px;
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__wrapper {
+    width: 100%;
+  }
+
+  .advantages__title-wrapper {
+    width: 720px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    border-left: 4px solid @yellow;
+  }
+
+  .advantages__title {
+    width: 680px; // !
+    margin: 0 auto;
+    font-size: 40px;
+    line-height: 78px;
+  }
+
+  .advantages__list {
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .advantages__item {
+    width: 360px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 75px;
+  }
+
+  .advantages__item:nth-child(2n) {
+    padding-left: 0;
+  }
+
+  .advantages__item-description {
+    width: 221px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .advantages__item-numeration {
+    width: 175px;
+    height: 175px;
+
+    &--credit:after {
+      top: 61px;
+      right: 23px;
+      width: 76px;
+      height: 76px;
+    }
+
+    &--house:after {
+      top: 61px;
+      right: 23px;
+      width: 76px;
+      height: 76px;
+    }
+
+    &--sketch:after {
+      top: 61px;
+      right: 23px;
+      width: 76px;
+      height: 76px;
+    }
+
+    &--key:after {
+      top: 61px;
+      right: 23px;
+      width: 75px;
+      height: 74px;
+
+    }
+
+    &--deposit:after {
+      top: 61px;
+      right: 23px;
+      width: 76px;
+      height: 76px;
+    }
+
+    &--information:after {
+      position: absolute;
+      top: 61px;
+      right: 23px;
+      content: "";
+      background-image: url("../img/info.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 75px;
+      height: 74px;
+    }
+  }
+
+  .advantages__item-numeration b {
+    top: 140px;
+    left: -10px;
+    font-size: 60px;
+    line-height: 30px;
+  }
+
 }

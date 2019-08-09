@@ -1,50 +1,171 @@
 .presentation {
+  position: relative;
   .container();
-  margin-top: -52px;
+  margin-top: -90px;
   margin-bottom: 30px;
+}
+
+.presentation__container {
+  padding-bottom: 15px;
   background-color: @presentation-black;
 }
 
 .presentation__wrapper {
   position: relative;
-  width: 300px;
-  min-height: 246px; // временно, пока нет файла с видео
-  margin: 0 auto;
-  padding: 47px 0 30px;
-}
-
-.presentation__slogan--wrapper {
-  width: 115px;
-  margin-left: 10px;
-  text-align: right;
-}
-
-.presentation__slogan {
-  position: absolute;
-  .no-indents();
+  top: -30px;
+  left: 20px;
+  content: "";
   width: 156px;
   min-height: 196px;
+  background-color: #ffb600;
+}
+
+.presentation__title {
+  position: relative;
+  width: 115px;
+  margin: 0;
+  margin-left: 20px;
+  padding-top: 15px;
+  text-align: right;
+
+  color: #000000;
   font-size: 12px;
   font-weight: 900;
   line-height: 15.56px;
-  margin-top: -96px;
-  margin-left: -9px;
-  padding-top: 18px;
-  color: @black;
-  background-color: @yellow;
-  z-index: 100;
 }
 
-.presentation__slogan--time {
-font-size: 12px;
-font-weight: 600;
-line-height: 15.05px;
-padding-left: 3px;
-color: @black;
+.presentation__small {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15.05px;
+  padding-left: 3px;
+  color: @black;
 }
 
 .presentation__video {
   position: relative;
-  background-color: white;
-  z-index: 1000;
+  left: 20px;
+  top: 20px;
+  width: 302px;
+  background-color: @white;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/play-button.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+.presentation__video-description {
+  position: absolute;
+  bottom: 15px;
+  left: 40px;
+  width: 94px;
+  text-align: right;
+  color: @grey;
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@media (min-width: @desktop-width) {
+  .presentation {
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+
+  .presentation__container {
+    position: relative;
+    margin: 0;
+    margin-left: 400px;
+
+    &:before {
+      position: absolute;
+      top: 0px;
+      left: -100px;
+      content: "";
+      width: 100px;
+      height: 88%;
+      background-color: @yellow;
+      background-image: url("../img/horizontal_arrow.svg");
+      background-size: 61px 30px;
+      background-repeat: no-repeat;
+      background-position: 20% 88%;
+    }
+
+    &:after {
+      position: absolute;
+      top: -32px;
+      left: -100px;
+      content: "";
+      width: 100%;
+      height: 32px;
+      background-color: @yellow;
+    }
+  }
+
+  .presentation__title {
+    left: -350px;
+    top: 200px;
+    width: 347px;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .presentation__small {
+    width: 245px;
+    font-size: 40px;
+    line-height: 50.29px;
+  }
+
+  .presentation__wrapper {
+    width: 100%;
+    left: -45px;
+    background-color: transparent;
+  }
+
+  .presentation__video {
+    width: 706px;
+    left: 35px;
+    top: -65px;
+
+    & img {
+      width: 706px;
+      height: 395px;
+    }
+
+    &:after {
+      width: 47px;
+      height: 47px;
+    }
+  }
+
+  .presentation__video:hover,  // нужны ли ховеры на мобилке ?!
+  .presentation__video:focus {
+    &:after {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .presentation__video:active {
+    &:after {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .presentation__video-description {
+    width: 249px;
+    font-size: 24px;
+    line-height: 32px;
+  }
 }

@@ -6,7 +6,7 @@
 'use strict';
 
 (function () {
-  var menuBtn = document.querySelector('.main-nav__item--humburger');
+  var menuBtn = document.querySelector('.main-nav__toggle');
   var menu = document.querySelector('.main-nav__user-list');
   var registrationMenu = document.querySelector('.modal-registration');
   var registrationBtn = document.querySelector('.main-nav__user-link--registration');
@@ -14,13 +14,13 @@
 
   var onClickHandler = function (evt) {
     evt.preventDefault();
-    menu.classList.toggle('visually-hidden');
+    menu.classList.toggle('main-nav__user-list--closed');
     registrationBtn.addEventListener('click', openRegMenu);
   };
 
   var openRegMenu = function (evt) {
     evt.preventDefault();
-    menu.classList.add('visually-hidden');
+    menu.classList.add('main-nav__user-list--closed');
     registrationMenu.classList.remove('modal--closed');
   };
 
