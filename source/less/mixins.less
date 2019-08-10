@@ -15,6 +15,23 @@
   color: @button-white;
   background-color: @black-button;
   cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    width: 344px;
+    border-radius: 47px;
+    font-size: 20px;
+    line-height: 32px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.9;
+    }
+
+    &:active {
+      opacity: 1;
+      font-size: 18px;
+    }
+  }
 }
 
 .action-button {

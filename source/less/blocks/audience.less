@@ -1,14 +1,20 @@
 .audience {
-  .container();
+  width: 100%;
   background-image: url("../img/small-photo.png");
   background-repeat: no-repeat;
+  background-size: auto;
   background-position: 50% 0;
   padding-top: 118px;
   margin-top: -28px;
 }
 
-.audience__title-wrapper {
+.audience__container {
+  .container();
+}
+
+.audience__wrapper {
   margin-left: 85px;
+  margin-bottom: 20px;
   border-left: 2px solid @yellow;
 }
 
@@ -21,12 +27,13 @@
   line-height: 27.04px;
   .no-indents();
   padding-left: 5px;
-  margin-bottom: 60px;
+  margin: 0;
 }
 
 .audience__list {
   list-style: none;
   .no-indents();
+  padding-top: 40px;
 }
 
 .audience__item {
@@ -45,9 +52,14 @@
     top: -61px;
     left: -120px;
     content: "";
-    background-image: url("../img/agent.png");
+    background-image: url("../img/agent_mobile1x.jpg");
     width:138px;
     height: 207px;
+
+    @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
+      background-image: url("../img/agent_mobile2x.jpg");
+      background-size: 138px auto;
+    }
   }
 
   &--agent:after {
@@ -65,9 +77,14 @@
     top: -29px;
     left: -139px;
     content: "";
-    background-image: url("../img/investor.png");
+    background-image: url("../img/investor_mobile1x.jpg");
     width:157px;
     height: 154px;
+
+    @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
+      background-image: url("../img/investor_mobile2x.jpg");
+      background-size: 157px auto;
+    }
   }
 
   &--company:before {
@@ -75,9 +92,14 @@
     top: -32px;
     left: -120px;
     content: "";
-    background-image: url("../img/company.png");
+    background-image: url("../img/company_mobile1x.jpg");
     width: 146px;
     height: 169px;
+
+    @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
+      background-image: url("../img/company_mobile2x.jpg");
+      background-size: 146px auto;
+    }
   }
 
   &--company:after {
@@ -138,5 +160,168 @@
   position: absolute;
   bottom: -13px;
   .button();
-  padding: 9px 0;
+  padding: 9px;
+}
+
+@media (min-width: @desktop-width) {
+  .audience {
+    background-image: url("../img/small_photo-desktop.jpg");
+    padding-top: 500px;
+    margin-top: -128px;
+    // outline: 1px solid red;
+  }
+
+  .audience__container {
+    // outline: 1px solid red;
+  }
+
+  .audience__wrapper {
+    width: 720px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-left: 4px solid @yellow;
+    // outline: 1px solid red;
+  }
+
+  .audience__title {
+    width: 680px;
+    margin-left: 20px;
+    font-size: 40px;
+    line-height: 78px;
+
+  }
+
+  .audience__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    margin-left: 500px;
+  }
+
+  .audience__item {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  .audience__item-container {
+    width: 688px; //764px;
+    height: 100%;
+    padding: 60px 30px 0 109px;//60px 50px 0 139px;
+  }
+
+  .audience__item-title {
+    width: 495px;
+    font-size: 30px;
+    line-height: 38px;
+    padding-left: 139px;
+    margin-bottom: 47px;
+
+    &--agent:before {
+      top: 8px;
+      left: 68px;
+      width: 30px;
+      height: 115px;
+    }
+
+    &--investor:before {
+      top: 8px;
+      left: 68px;
+      width: 30px;
+      height: 115px;
+    }
+
+    &--company:before {
+      position: absolute;
+      top: 8px;
+      left: 68px;
+      content: "";
+      width: 30px;
+      height: 115px;
+      background-color: @yellow;
+    }
+  }
+
+  .audience__item-description {
+    width: 550px;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 28px;
+  }
+
+  .audience__item-container--company .audience__item-description {
+    width: 500px;
+  }
+
+  .audience__item-container {
+    // outline: 1px solid red;
+    min-height: 571px;
+
+    &--agent:before {
+      position: absolute;
+      top: -297px;
+      left: -452px;
+      content: "";
+      background-image: url("../img/agent_desktop1x.jpg");
+      width:520px;
+      height: 782px;
+
+      @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
+        background-image: url("../img/agent_desktop2x.jpg");
+        background-size: 520px auto;
+      }
+    }
+
+    &--agent:after {
+      top: 485px;
+      left: -244px;
+      width: 244px;
+      height: 26px;
+    }
+
+    &--investor:before {
+      position: absolute;
+      top: -115px;
+      left: -815px;
+      content: "";
+      background-image: url("../img/investor_desktop1x.jpg");
+      width:883px;
+      height: 601px;
+
+      @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
+        background-image: url("../img/investor_desktop2x.jpg");
+        background-size: 883px auto;
+      }
+    }
+
+    &--company:before {
+      position: absolute;
+      top: -115px;
+      left: -524px;
+      content: "";
+      background-image: url("../img/company_desktop1x.jpg");
+      width: 592px;
+      height: 686px;
+
+      @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
+        background-image: url("../img/company_desktop2x.jpg");
+        background-size: 592px auto;
+      }
+    }
+
+    &--company:after {
+      top: 100%;
+      bottom: -30px;
+      left: -244px;
+      width: 353px;
+      height: 30px;
+    }
+  }
+
+  .audience__button {
+    bottom: 20px;
+    margin-bottom: 28px;
+    margin-left: 100px;
+    padding: 30px;
+  }
 }

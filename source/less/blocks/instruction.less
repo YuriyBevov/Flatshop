@@ -3,7 +3,7 @@
   padding-top: 11px;
 }
 
-.instruction__wrapper {
+.instruction__container {
   padding: 0 52px;
 }
 
@@ -20,14 +20,13 @@
   padding-left: 5px;
 }
 
-.instruction__title-wrapper {
+.instruction__wrapper {
   border-left: 2px solid @yellow;
 }
 
 .instruction__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   list-style: none;
   .no-indents();
   margin: 0 auto;
@@ -49,6 +48,7 @@
     width: 43px;
     height: 43px;
     background-image: url("../img/desktop.svg");
+    background-size: 43px 43px;
   }
 
   &--manager:before {
@@ -58,7 +58,8 @@
     content: "";
     width: 43px;
     height: 42px;
-    background-image: url("../img/manager2.svg");
+    background-image: url("../img/manager.svg");
+    background-size: 43px 42px;
   }
 
   &--contract:before {
@@ -68,7 +69,8 @@
     content: "";
     width: 43px;
     height: 43px;
-    background-image: url("../img/contract2.svg");
+    background-image: url("../img/contract.svg");
+    background-size: 43px 43px;
   }
 
   &--sketch:before {
@@ -79,13 +81,14 @@
     width: 41px;
     height: 43px;
     background-image: url("../img/sketch2.svg");
+    background-size: 41px 43px;
   }
 }
 
-.instruction__item:nth-child(even) {
+/*.instruction__item:nth-child(even) {
   width: 116px;
   margin-right: 3px;
-}
+}*/
 
 .instruction__item-number {
   position: absolute;
@@ -112,4 +115,102 @@
   line-height: 13.34px;
   margin: 0;
   padding: 123px 10px 10px 15px;
+}
+
+@media (min-width: @desktop-width) {
+  .instruction__wrapper {
+    width: 720px;
+    margin: 0 auto;
+    margin-bottom: 95px;
+    border-left: 4px solid @yellow;
+  }
+
+  .instruction__title {
+    width: 680px;
+    margin-left: 20px;
+    font-size: 40px;
+    line-height: 78px;
+  }
+
+  .instruction__list {
+    width: 1080px;
+  }
+
+  .instruction__item {
+    width: 250px;
+    min-height: 483px;
+    margin: 0;
+    margin-right: 12px;
+    margin-bottom: 12px;
+
+    &--registration:before {
+      top: 140px;
+      left: 80px;
+      width: 104px;
+      height: 101px;
+      background-size: 104px 101px;
+    }
+
+    &--manager:before {
+      top: 140px;
+      left: 80px;
+      width: 103px;
+      height: 102px;
+      background-size: 103px 102px;
+    }
+
+    &--contract:before {
+      top: 140px;
+      left: 80px;
+      width: 102px;
+      height: 102px;
+      background-size: 102px 102px;
+    }
+
+    &--sketch:before {
+      top: 140px;
+      left: 80px;
+      width: 99px;
+      height: 102px;
+      background-size: 99px 102px;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 30px;
+      right: 38px;
+      content: "";
+      width: 34px;
+      height: 17px;
+      background-image: url("../img/white-arrow_right.svg");
+      background-size: 34px 17px;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  .instruction__item:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .instruction__item-description {
+    width: 100%;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 283px 10px 0px 20px;
+    margin-bottom: 65px;
+    word-wrap: break-word;
+  }
+
+  .instruction__item-number {
+    top: 21px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 30px;
+    padding-top: 14px;
+  }
 }

@@ -3,7 +3,7 @@
   margin-top: -66px;
 }
 
-.registration__wrapper {
+.registration__container {
   margin: 0 auto;
   margin-bottom: 17px;
 }
@@ -14,9 +14,9 @@
   background-color: @black;
 }
 
-.registration__title-wrapper {
+.registration__wrapper {
   margin-left: 20px;
-  border-left: 1px solid @yellow;
+  border-left: 2px solid @yellow;
 }
 
 .registration__title {
@@ -97,4 +97,31 @@
   margin-bottom: 29px;
   text-decoration: underline;
   color: @extraLight-grey;
+}
+
+@media (min-width: @desktop-width) {
+  .registration__container {
+    
+  }
+
+  .registration__wrapper {
+    width: 720px;
+    margin: 0 auto;
+    border-left: 4px solid @yellow;
+  }
+
+  .registration__title {
+    width: 680px;
+    margin-left: 20px;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .registration__description {
+    width: 680px;
+    font-size: 36px;
+    line-height: 52px;
+    margin: 0 auto;
+    padding-left: 11px;
+  }
 }
