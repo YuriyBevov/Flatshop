@@ -1,5 +1,5 @@
 .content {
-  background-image: url("../img/main-photo.png");
+  background-image: url("../img/main_photo.jpg");
   background-size: 100%;
   min-height: 586px;
 }
@@ -65,11 +65,21 @@
 }
 
 @media (min-width: @desktop-width) {
+
   .content {
     background-image: url("../img/main_desktop.jpg");
     background-size: cover;
     min-height: 834px;
+
+    @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
+      background-image: url("../img/main_desktop2x.jpg");
+    }
   }
+  /*.content {
+    background-image: url("../img/main_desktop.jpg");
+    background-size: cover;
+    min-height: 834px;
+  }*/
 
   .content__wrapper {
     width: 600px;

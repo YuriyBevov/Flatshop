@@ -55,11 +55,6 @@
     background-image: url("../img/agent_mobile1x.jpg");
     width:138px;
     height: 207px;
-
-    @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
-      background-image: url("../img/agent_mobile2x.jpg");
-      background-size: 138px auto;
-    }
   }
 
   &--agent:after {
@@ -80,11 +75,6 @@
     background-image: url("../img/investor_mobile1x.jpg");
     width:157px;
     height: 154px;
-
-    @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
-      background-image: url("../img/investor_mobile2x.jpg");
-      background-size: 157px auto;
-    }
   }
 
   &--company:before {
@@ -95,11 +85,6 @@
     background-image: url("../img/company_mobile1x.jpg");
     width: 146px;
     height: 169px;
-
-    @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
-      background-image: url("../img/company_mobile2x.jpg");
-      background-size: 146px auto;
-    }
   }
 
   &--company:after {
@@ -165,14 +150,15 @@
 
 @media (min-width: @desktop-width) {
   .audience {
-    background-image: url("../img/small_photo-desktop.jpg");
+    background-image: url("../img/small_photo-desktop1x.jpg");
+    background-size: 100% 383px;
+    background-repeat: no-repeat;
     padding-top: 500px;
     margin-top: -128px;
-    // outline: 1px solid red;
-  }
 
-  .audience__container {
-    // outline: 1px solid red;
+    @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
+      background-image: url("../img/small_photo-desktop2x.jpg");
+    }
   }
 
   .audience__wrapper {
@@ -180,7 +166,6 @@
     margin: 0 auto;
     margin-bottom: 30px;
     border-left: 4px solid @yellow;
-    // outline: 1px solid red;
   }
 
   .audience__title {
@@ -194,20 +179,13 @@
   .audience__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 200px;
-    margin-left: 500px;
+    align-items: flex-end;
+    padding-top: 50px;
   }
 
   .audience__item {
     padding: 0;
     margin-bottom: 50px;
-  }
-
-  .audience__item-container {
-    width: 688px; //764px;
-    height: 100%;
-    padding: 60px 30px 0 109px;//60px 50px 0 139px;
   }
 
   .audience__item-title {
@@ -254,26 +232,29 @@
   }
 
   .audience__item-container {
-    // outline: 1px solid red;
-    min-height: 571px;
+    width: 638px;
+    min-height: 521px;
+
+    padding: 50px 30px 0 89px;
 
     &--agent:before {
       position: absolute;
-      top: -297px;
-      left: -452px;
+      top: -115px;
+      left: -301px;
       content: "";
       background-image: url("../img/agent_desktop1x.jpg");
-      width:520px;
-      height: 782px;
+      background-repeat: no-repeat;
+      width: 369px;
+      height: 555px;
 
       @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
         background-image: url("../img/agent_desktop2x.jpg");
-        background-size: 520px auto;
+        background-size: 369px auto;
       }
     }
 
     &--agent:after {
-      top: 485px;
+      top: 440px;
       left: -244px;
       width: 244px;
       height: 26px;
@@ -282,46 +263,48 @@
     &--investor:before {
       position: absolute;
       top: -115px;
-      left: -815px;
+      left: -490px;
       content: "";
       background-image: url("../img/investor_desktop1x.jpg");
-      width:883px;
-      height: 601px;
+      background-repeat: no-repeat;
+      width:558px;
+      height: 379px;
 
       @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
         background-image: url("../img/investor_desktop2x.jpg");
-        background-size: 883px auto;
+        background-size: 558px auto;
       }
     }
 
     &--company:before {
       position: absolute;
       top: -115px;
-      left: -524px;
+      left: -352px;
       content: "";
       background-image: url("../img/company_desktop1x.jpg");
-      width: 592px;
-      height: 686px;
+      background-repeat: no-repeat;
+      width: 420px;
+      height: 487px;
 
       @media (min-resolution: @retina-dppx) and (min-resolution: @retina-dpi) {
         background-image: url("../img/company_desktop2x.jpg");
-        background-size: 592px auto;
+        background-size: 420px auto;
       }
     }
 
     &--company:after {
-      top: 100%;
-      bottom: -30px;
-      left: -244px;
-      width: 353px;
+      top: auto;
+      bottom: 119px;
+      left: -352px;
+      width: 352px;
       height: 30px;
     }
   }
 
   .audience__button {
     bottom: 20px;
-    margin-bottom: 28px;
-    margin-left: 100px;
-    padding: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    padding: 15px;
   }
 }
